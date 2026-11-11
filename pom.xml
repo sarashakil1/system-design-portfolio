@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Spring Boot 4.1.x: current stable line (Nov 2026). Manages versions for
+         Postgres driver, Flyway, Testcontainers 2.x, JUnit, etc. -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.1.2</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.portfolio</groupId>
+    <artifactId>system-design-portfolio</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>system-design-portfolio</name>
+
+    <properties>
+        <java.version>21</java.version>
+    </properties>
+
+    <!-- One module per project. Add each new one here as you start it. -->
+    <modules>
+        <module>url-shortener</module>
+        <!-- <module>rate-limiter</module>     Day 2-3 -->
+        <!-- <module>job-queue</module>        Day 4-5 -->
+        <!-- <module>ledger</module>           Day 5-7 -->
+        <!-- <module>chat-server</module>      Day 8 -->
+        <!-- <module>zero-downtime-migration</module>  Day 9 -->
+    </modules>
+</project>

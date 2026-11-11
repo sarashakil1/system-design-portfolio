@@ -1,0 +1,16 @@
+target/
+*.class
+*.log
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# k6 output
+load-tests/results/
+
+# local env
+.env

@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: url-shortener
+  datasource:
+    url: jdbc:postgresql://localhost:5432/portfolio
+    username: portfolio
+    password: portfolio
+    hikari:
+      # Schema-per-service: every project shares one Postgres but owns its schema.
+      # Set on the pool (not the JDBC URL) so it also applies when Testcontainers
+      # replaces the URL in tests.
+      schema: shortener
+  flyway:
+    default-schema: shortener
+    schemas: shortener
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
