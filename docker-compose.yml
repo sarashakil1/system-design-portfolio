@@ -7,6 +7,7 @@ name: sdp
 services:
   postgres:
     image: postgres:17-alpine
+    command: ["postgres", "-c", "log_statement=ddl"]
     environment:
       POSTGRES_DB: portfolio
       POSTGRES_USER: portfolio
